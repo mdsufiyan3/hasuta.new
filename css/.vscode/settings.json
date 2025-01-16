@@ -1,0 +1,8 @@
+{
+    "search.useGlobalIgnoreFiles": true,
+    "search.useParentIgnoreFiles": true,
+    "search.exclude": {
+        "FUTURE IS NOW": true
+    },
+    "liveServer.settings.port": 5501
+}

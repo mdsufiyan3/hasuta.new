@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - HASUTA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/dashbord test/css3/products.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/download.png" alt="HASUTA" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-icons">
+                <a href="dashboard.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </a>
+                <button onclick="resetProductData()" class="reset-btn">
+                    <i class="fas fa-undo"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Status Filters -->
+    <div class="status-filters">
+        <div class="filter-container">
+            <div class="filter-card" data-status="total">
+                <div class="filter-icon total-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <div class="filter-info">
+                    <h3>Total Products</h3>
+                    <span class="filter-count" id="totalCount">0</span>
+                </div>
+            </div>
+            <div class="filter-card" data-status="in-stock">
+                <div class="filter-icon in-stock-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="filter-info">
+                    <h3>In Stock</h3>
+                    <span class="filter-count" id="inStockCount">0</span>
+                </div>
+            </div>
+            <div class="filter-card" data-status="low-stock">
+                <div class="filter-icon low-stock-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="filter-info">
+                    <h3>Low Stock</h3>
+                    <span class="filter-count" id="lowStockCount">0</span>
+                </div>
+            </div>
+            <div class="filter-card" data-status="out-of-stock">
+                <div class="filter-icon out-stock-icon">
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                <div class="filter-info">
+                    <h3>Out of Stock</h3>
+                    <span class="filter-count" id="outStockCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="products-content">
+        <div class="categories-container">
+            <div class="category-section" id="winterCollection">
+                <div class="category-header">
+                    <h2 class="category-title">Winter Collection</h2>
+                    <a href="winter-collection.html" class="view-all">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="products-grid">
+                    <!-- Winter Collection Products -->
+                    <div class="product-card" data-product-id="w1">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1604644401890-0bd678c83788?w=500" alt="Modern Hoodie">
+                        </div>
+                        <h3 class="product-name">Modern Hoodie</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹399</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="w1">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/winter dashbord html and js&css fils/H.W dashbordpd1.html" class="edit-details-btn">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <!-- Repeat for 4 more winter products -->
+                    <!-- Similar structure for remaining 4 winter products with different images and details -->
+                    <div class="product-card" data-product-id="w2">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=500" alt="Wool Blend Sweater">
+                        </div>
+                        <h3 class="product-name">Wool Blend Sweater</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹1999</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="w2">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/winter dashbord html and js&css fils/H.W dashbordpd2.html" class="edit-details-btn" data-product-id="w2">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="w3">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=500" alt="Thermal Innerwear Set">
+                        </div>
+                        <h3 class="product-name">Thermal Innerwear Set</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹1499</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="w3">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/winter dashbord html and js&css fils/H.W dashbordpd3.html" class="edit-details-btn" data-product-id="w3">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="w4">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1542280756-74b2f55e73ab?w=500" alt="Snow Boots">
+                        </div>
+                        <h3 class="product-name">Snow Boots</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹2999</span>
+                            <div class="stock-container">
+                                <span class="stock-status low-stock">Low Stock</span>
+                                <button class="stock-edit-icon" data-product-id="w4">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/winter dashbord html and js&css fils/H.W dashbordpd4.html" class="edit-details-btn" data-product-id="w4">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="w5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1584613862210-a96e43c5c6e1?w=500" alt="Cashmere Scarf">
+                        </div>
+                        <h3 class="product-name">Cashmere Scarf</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹1299</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="w5">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/winter dashbord html and js&css fils/H.W dashbordpd5.html" class="edit-details-btn" data-product-id="w5">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-section" id="streetCollection">
+                <div class="category-header">
+                    <h2 class="category-title">Street Collection</h2>
+                    <a href="street-collection.html" class="view-all">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="products-grid">
+                    <!-- Street Collection Products -->
+                    <div class="product-card" data-product-id="s1">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=500" alt="Cargo Joggers">
+                        </div>
+                        <h3 class="product-name">Cargo Joggers</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹2499</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="s1">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/streetwear dashbord html and js&css fils/H.ST dashbordpd1.html" class="edit-details-btn" data-product-id="s1">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <!-- Repeat for 4 more street products -->
+                    <!-- Similar structure for remaining 4 street products with different images and details -->
+                    <div class="product-card" data-product-id="s2">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500" alt="Oversized Hoodie">
+                        </div>
+                        <h3 class="product-name">Oversized Hoodie</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹2999</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="s2">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/streetwear dashbord html and js&css fils/H.ST dashbordpd2.html" class="edit-details-btn" data-product-id="s2">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="s3">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" alt="High-top Sneakers">
+                        </div>
+                        <h3 class="product-name">High-top Sneakers</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹3499</span>
+                            <div class="stock-container">
+                                <span class="stock-status low-stock">Low Stock</span>
+                                <button class="stock-edit-icon" data-product-id="s3">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/streetwear dashbord html and js&css fils/H.ST dashbordpd3.html" class="edit-details-btn" data-product-id="s3">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="s4">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1601333144130-8cbb312386b6?w=500" alt="Vintage Denim Jacket">
+                        </div>
+                        <h3 class="product-name">Vintage Denim Jacket</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹3999</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="s4">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/streetwear dashbord html and js&css fils/H.ST dashbordpd4.html" class="edit-details-btn" data-product-id="s4">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="s5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Graphic Print T-shirt">
+                        </div>
+                        <h3 class="product-name">Graphic Print T-shirt</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹999</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="s5">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/streetwear dashbord html and js&css fils/H.ST dashbordpd5.html" class="edit-details-btn" data-product-id="s5">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-section" id="summerCollection">
+                <div class="category-header">
+                    <h2 class="category-title">Summer Collection</h2>
+                    <a href="summar-collection.html" class="view-all">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="products-grid">
+                    <!-- Summer Collection Products -->
+                    <div class="product-card" data-product-id="su1">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1604695573706-53731f81c2d8?w=500" alt="Linen Shirt">
+                        </div>
+                        <h3 class="product-name">Linen Shirt</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹1499</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="su1">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/summer  dashbord html and js&css fils/H.SU dashbordpd1.html" class="edit-details-btn" data-product-id="su1">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <!-- Repeat for 4 more summer products -->
+                    <!-- Similar structure for remaining 4 summer products with different images and details -->
+                    <div class="product-card" data-product-id="su2">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500" alt="Cotton Shorts">
+                        </div>
+                        <h3 class="product-name">Cotton Shorts</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹999</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="su2">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/summer  dashbord html and js&css fils/H.SU dashbordpd2.html" class="edit-details-btn" data-product-id="su2">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="su3">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=500" alt="Floral Dress">
+                        </div>
+                        <h3 class="product-name">Floral Dress</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹2499</span>
+                            <div class="stock-container">
+                                <span class="stock-status low-stock">Low Stock</span>
+                                <button class="stock-edit-icon" data-product-id="su3">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/summer  dashbord html and js&css fils/H.SU dashbordpd3.html" class="edit-details-btn" data-product-id="su3">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="su4">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1603487742131-4e605174c0d5?w=500" alt="Beach Sandals">
+                        </div>
+                        <h3 class="product-name">Beach Sandals</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹899</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="su4">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/summer  dashbord html and js&css fils/H.SU dashbordpd4.html" class="edit-details-btn" data-product-id="su4">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                    <div class="product-card" data-product-id="su5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1572307480813-ceb0e59d8325?w=500" alt="Straw Sun Hat">
+                        </div>
+                        <h3 class="product-name">Straw Sun Hat</h3>
+                        <div class="product-details">
+                            <span class="product-price">₹799</span>
+                            <div class="stock-container">
+                                <span class="stock-status in-stock">In Stock</span>
+                                <button class="stock-edit-icon" data-product-id="su5">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="/summer  dashbord html and js&css fils/H.SU dashbordpd5.html" class="edit-details-btn" data-product-id="su5">
+                            <i class="fas fa-edit"></i> Edit Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/dashbord test/js3/products.js"></script>
+
+    <div class="small-edit-overlay" id="stockEditOverlay">
+        <div class="small-edit-modal">
+            <div class="modal-header">
+                <h3>Update Stock Status</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="form-group">
+                    <label for="editStockStatus">Stock Status</label>
+                    <select id="editStockStatus" class="stock-select">
+                        <option value="in-stock">In Stock</option>
+                        <option value="low-stock">Low Stock</option>
+                        <option value="out-of-stock">Out of Stock</option>
+                    </select>
+                </div>
+                <button class="update-stock-btn">Update Status</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="small-edit-overlay" id="textEditOverlay">
+        <div class="small-edit-modal">
+            <div class="modal-header">
+                <h3>Edit Product Details</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="form-group">
+                    <label for="editProductName">Product Name</label>
+                    <input type="text" id="editProductName" class="text-input">
+                </div>
+                <div class="form-group">
+                    <label for="editProductPrice">Price (₹)</label>
+                    <input type="text" id="editProductPrice" class="text-input">
+                </div>
+                <button class="update-stock-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

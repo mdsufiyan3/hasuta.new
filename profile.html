@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HASUTA - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/md5.min.js"></script>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <!-- Add this right after the body tag -->
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Your existing HTML content -->
+      <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="image/download.png" alt="HASUTA" class="logo-image">
+            </div>
+          
+            <div class="nav-icons">
+                <a href="index.html" class="icon-link">
+                    <img src="image/WhatsApp_Image_2025-01-10_at_21.12.31_d9320fe3-removebg-preview.png" alt="Home" style="width: 35px; height: 35px;">
+                </a>
+               
+            </div>
+        </nav>
+    </header>
+
+   
+    <!-- Main Content Area -->
+    <main>
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-cover">
+                    <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Cover Photo">
+                </div>
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <div class="galaxy-effect">
+                            <span class="star" style="--i:1"></span>
+                            <span class="star" style="--i:2"></span>
+                            <span class="star" style="--i:3"></span>
+                            <span class="star" style="--i:4"></span>
+                            <span class="star" style="--i:5"></span>
+                            <span class="star" style="--i:6"></span>
+                        </div>
+                        <div class="galaxy-background">
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                            <span class="bg-star"></span>
+                        </div>
+                        <img id="profileAvatar" src="image/WhatsApp Image 2025-01-10 at 21.22.21_4b65c791.jpg">
+                    </div>
+                    <div class="profile-details">
+                        <div class="profile-name">
+                            <h2 id="profileName"></h2>
+                        </div>
+                        <div class="profile-contact-info">
+                            <p class="contact-item">
+                                <span class="contact-label">Email: </span>
+                                <span id="profileEmail" style="display: inline-block; margin-left: 5px;"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Stats -->
+            <div class="profile-stats">
+                <a href="orders.html" class="stat-item animated-stat" style="text-decoration: none; color: inherit;">
+                    <img src="image/images-removebg-preview.png" alt="Orders" class="stat-sticker bounce-icon">
+                    <div class="stat-details">
+                        <span class="stat-label">My Orders</span>
+                    </div>
+                </a>
+                <a href="dashbord test/index.html" class="stat-item" style="text-decoration: none; color: inherit;">
+                    <img src="image/images-removebg-preview (1).png" alt="Dashboard" class="stat-sticker">
+                    <div class="stat-details">
+                        <span class="stat-label">Dashboard</span>
+                    </div>
+                </a>
+                <a href="cart.html" class="stat-item" style="text-decoration: none; color: inherit;">
+                    <img src="image/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3JtNTM1YmF0Y2gyLWNhcnQtMDMteC5qcGc-Photoroom.png" alt="Cart" class="stat-sticker cart-bounce">
+                    <div class="stat-details">
+                        <span class="stat-label">My Cart</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Profile Actions -->
+            <div class="profile-actions">
+                <a href="#" class="action-card">
+                    <img src="image/newsletter-email-icon-gold-round-button-golden-coin-shiny-frame-shadow-luxury-realistic-border-concept-abstract-illustration-167076063-Photoroom.png" alt="Support" class="action-sticker">
+                    <span>Support Us</span>
+                </a>
+                <a href="#" class="action-card">
+                    <img src="image/istockphoto-596362522-612x612-Photoroom.png" alt="Company" class="action-sticker">
+                    <span>About HASUTA</span>
+                </a>
+                <a href="#" class="action-card">
+                    <img src="image/Screenshot_2025-01-11_130018-removebg-preview.png" alt="Grow" class="action-sticker grow-sticker">
+                    <span>Grow With Us</span>
+                </a>
+                <a href="#" class="action-card" onclick="logout()">
+                    <img src="image/images-removebg-preview (3).png" alt="Logout" class="action-sticker">
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <div class="security-overlay" id="securityOverlay">
+        <div class="security-dialog">
+            <h3>Security Check</h3>
+            <p>Please enter the security code:</p>
+            <p class="admin-notice">A verification code has been sent to HASUTA******@gmail.com</p>
+            <input type="password" id="securityCode" placeholder="Enter security code">
+            <div class="security-buttons">
+                <button class="security-btn cancel-btn" id="cancelSecurity">Cancel</button>
+                <button class="security-btn verify-btn" id="verifySecurity">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>

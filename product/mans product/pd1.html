@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore HASUTA's exclusive streetwear collection featuring hoodies and urban fashion">
+    <meta name="keywords" content="streetwear, hoodies, urban fashion, HASUTA">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/product view pages/css/hoodi-ditails.css">
+    <script type="module" src="/js/cart-handler.js"></script>
+     
+      </head> 
+    <link 
+<body>
+    <!-- Add this right after the opening <body> tag -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/download.png" alt="HASUTA" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-icons">
+                <a href="profile.html" class="nav-icon">
+                    <img src="image/WhatsApp_Image_2025-01-10_at_21.22.20_5031295e-removebg-preview.png" alt="Profile" class="sticker-icon">
+                </a>
+                <!-- Add edit icon here -->
+                <a href="edit-profile.html" class="nav-icon">
+                    <i class="fas fa-edit sticker-icon"></i>
+                </a>
+                <a href="cart.html" class="nav-icon">
+                    <img src="image/WhatsApp_Image_2025-01-10_at_20.47.46_ff41ac29-removebg-preview.png" alt="Cart" class="sticker-icon cart-sticker">
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <a href="index.html" class="nav-icon">
+                    <img src="image/WhatsApp_Image_2025-01-10_at_21.12.31_d9320fe3-removebg-preview.png" alt="Home" class="sticker-icon">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    
+
+      <!-- Main Content -->
+    <main class="product-view">
+        <div class="product-container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img id="mainImage" src="" alt="Product Image">
+                    <button class="edit-image-btn">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </div>
+                <div class="thumbnail-container">
+                    <!-- Thumbnails will be dynamically added -->
+                </div>
+            </div>
+            
+            <div class="product-details">
+                <span id="productCategory" class="product-category"></span>
+                <h1 id="productTitle" class="product-title"></h1>
+                <div class="product-price">
+                    <span id="productPrice"></span>
+                </div>
+                <div class="stock-status in-stock">
+                    <i class="fas fa-check-circle"></i>
+                    <span>In Stock</span>
+                </div>
+                
+                <div class="size-selector">
+                    <h3>Select Size</h3>
+                    <div class="size-options">
+                        <button class="size-btn" data-size="M">M</button>
+                        <button class="size-btn" data-size="L">L</button>
+                        <button class="size-btn" data-size="XL">XL</button>
+                    </div>
+                </div>
+
+                <div class="quantity-selector">
+                    <h3>Quantity</h3>
+                    <div class="quantity-controls">
+                        <button id="decreaseQuantity">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button id="increaseQuantity">+</button>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button id="addToCart" class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="btn-text">Add to Cart</span>
+                    </button>
+                    <button id="buyNow" class="buy-now-btn">
+                        <i class="fas fa-bolt"></i>
+                        <span class="btn-text">Buy Now</span>
+                    </button>
+                </div>
+                  
+ <!-- Fix 2: Add the product specifications section properly -->
+ <div class="product-specifications">
+    <h3>
+        Product Specifications 
+        <i class="fas fa-caret-up toggle-icon" id="toggleSpecs"></i>
+    </h3>
+    <div class="specs-grid" id="specsContent" style="display: none;">
+        <div class="spec-item">
+            <span class="spec-label"><i class="fas fa-tshirt"></i> Fabric</span>
+            <span class="spec-value">Premium Wool Blend</span>
+        </div>
+        <div class="spec-item">
+            <span class="spec-label"><i class="fas fa-weight"></i> Weight</span>
+            <span class="spec-value">Heavy Winter Weight</span>
+        </div>
+        <div class="spec-item">
+            <span class="spec-label"><i class="fas fa-palette"></i> Color</span>
+            <span class="spec-value">Charcoal Grey</span>
+        </div>
+        <div class="spec-item">
+            <span class="spec-label"><i class="fas fa-ruler-combined"></i> Fit</span>
+            <span class="spec-value">Regular Fit</span>
+        </div>
+        <div class="spec-item">
+            <span class="spec-label"><i class="fas fa-tint"></i> Wash Care</span>
+            <span class="spec-value">Machine Wash Cold</span>
+        </div>
+    </div>
+</div>
+   
+<!-- Add this after the product specifications div -->
+<div class="help-section">
+    <h3>
+        Help & Support 
+        <i class="fas fa-caret-up toggle-icon" id="toggleHelp"></i>
+    </h3>
+    <div class="help-grid" id="helpContent" style="display: none;">
+        <div class="help-item">
+            <span class="help-label">
+                <i class="fas fa-truck"></i> Shipping 
+            </span>
+            <span class="help-value"> (fast express) Free shipping on orders above ₹999</span>
+        </div>
+        <div class="help-item">
+            <span class="help-label">
+                <i class="fas fa-undo"></i> Returns
+            </span>
+            <span class="help-value">Easy 7-day return policy</span>
+        </div>
+       
+        <div class="help-item">
+            <span class="help-label">
+                <i class="fas fa-money-bill-wave"></i> Payment
+            </span>
+            <span class="help-value">cash on Delivery  ( Available)</span>
+        </div>
+        <div class="help-item">
+            <span class="help-label">
+                <i class="fas fa-question-circle"></i> Support
+            </span>
+            <span class="help-value">24/7 customer service</span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+    <div class="reviews-section">
+        <div class="reviews-header">
+            <div class="reviews-title">
+                <h3>Customer Reviews</h3>
+                <span class="review-count">(127 Reviews)</span>
+            </div>
+            <button class="view-all-reviews">
+                <span>View All</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="rating-number">4.5</div>
+        <div class="rating-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        
+        <div class="reviews-container">
+            <!-- Review 1 -->
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="review-user">
+                        <div class="user-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="user-info">
+                            <div class="user-name">John Doe</div>
+                            <div class="review-date">2 days ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>Great quality product! The fabric is premium and the fit is perfect. Highly recommended for anyone looking for comfortable streetwear.</p>
+                </div>
+                <div class="verified-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified Purchase</span>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="review-user">
+                        <div class="user-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="user-info">
+                            <div class="user-name">Sarah Smith</div>
+                            <div class="review-date">1 week ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>Love the design and style. The material is breathable and comfortable. Would definitely buy again!</p>
+                </div>
+                <div class="verified-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified Purchase</span>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="review-user">
+                        <div class="user-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="user-info">
+                            <div class="user-name">Mike Johnson</div>
+                            <div class="review-date">2 weeks ago</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>The sizing is perfect and the quality is outstanding. Fast delivery and great customer service!</p>
+                </div>
+                <div class="verified-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified Purchase</span>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Add this after the reviews section and before the "You May Also Like" separator -->
+ <div class="users-love-section">
+    <h3>Users Love</h3>
+    <div class="user-photos-container">
+        <div class="user-photo-item">
+            <img src="image/dress2.jfif" alt="Street Style" class="user-photo">
+        </div>
+        <div class="user-photo-item">
+            <img src="image/dress2.jfif" alt="Street Style" class="user-photo">
+        </div>
+        <div class="user-photo-item">
+            <img src="image/dress2.jfif" alt="Casual Look" class="user-photo">
+        </div>
+        <div class="user-photo-item">
+            <img src="image/dress2.jfif" alt="Graphic Design" class="user-photo">
+        </div>
+        <div class="user-photo-item">
+            <img src="image/dress2.jfif" alt="Anime Style" class="user-photo">
+        </div>
+        <div class="user-photo-item">
+            <img src="image/dress2.jfif" alt="Street Fashion" class="user-photo">
+        </div>
+    </div>
+</div>
+<!-- Add this section before the footer -->
+<section class="video-section">
+    <div class="video-section-header">
+        <h3>Product Videos</h3>
+    </div>
+    <div class="video-container">
+        <!-- Video 1 -->
+        <div class="video-item">
+            <video class="product-video" poster="image/preview_roll.mp4">
+                <source src="image/preview_roll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-play-button">
+                <i class="fas fa-play"></i>
+            </div>
+            <span class="video-duration">0:00</span>
+            <div class="video-info">
+                <h4 class="video-title">Product Overview</h4>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-item">
+            <video class="product-video" poster="path/to/poster2.jpg">
+                <source src="path/to/video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-play-button">
+                <i class="fas fa-play"></i>
+            </div>
+            <span class="video-duration">0:00</span>
+            <div class="video-info">
+                <h4 class="video-title">Styling Guide</h4>
+            </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-item">
+            <div class="video-wrapper">
+                <video class="product-video" 
+                    poster="path/to/thumbnail3.jpg" 
+                    preload="metadata">
+                    <source src="path/to/video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <div class="video-play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <span class="video-duration">0:00</span>
+                </div>
+            </div>
+            <div class="video-info">
+                <h4 class="video-title">Features & Details</h4>
+            </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-item">
+            <div class="video-wrapper">
+                <video class="product-video" 
+                    poster="path/to/thumbnail4.jpg" 
+                    preload="metadata">
+                    <source src="path/to/video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <div class="video-play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <span class="video-duration">0:00</span>
+                </div>
+            </div>
+            <div class="video-info">
+                <h4 class="video-title">Care Instructions</h4>
+            </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="video-item">
+            <div class="video-wrapper">
+                <video class="product-video" 
+                    poster="path/to/thumbnail5.jpg" 
+                    preload="metadata">
+                    <source src="path/to/video5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <div class="video-play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <span class="video-duration">0:00</span>
+                </div>
+            </div>
+            <div class="video-info">
+                <h4 class="video-title">Customer Reviews</h4>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Add this new separator div -->
+    <div class="section-separator">
+        <div class="separator-line"></div>
+        <span class="separator-text">You May Also Like</span>
+        <div class="separator-line"></div>
+    </div>
+
+    <!-- Second Section (previously Summer Collection) -->
+    <section class="category-section">
+        <div class="category-row">
+            <div class="product-card">
+                <span class="category-label">NEW</span>
+                <img src="images/products/summer1.jpg" alt="Summer Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">LINEN SHIRT</h3>
+                    <p class="product-price">₹2,499</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="category-label">HOT</span>
+                <img src="images/products/summer2.jpg" alt="Summer Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">COTTON SHORTS</h3>
+                    <p class="product-price">₹1,999</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="category-label">TRENDING</span>
+                <img src="images/products/summer3.jpg" alt="Summer Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">BEACH TEE</h3>
+                    <p class="product-price">₹1,499</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="category-label">POPULAR</span>
+                <img src="images/products/summer4.jpg" alt="Summer Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">LIGHT BLAZER</h3>
+                    <p class="product-price">₹2,999</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="category-label">BESTSELLER</span>
+                <img src="images/products/summer5.jpg" alt="Summer Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">SUMMER DRESS</h3>
+                    <p class="product-price">₹3,499</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Section (previously Streetwear Collection) -->
+    <section class="category-section">
+        <div class="category-row">
+            <div class="product-card">
+                <span class="category-label">NEW</span>
+                <img src="images/products/streetwear1.jpg" alt="Streetwear Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">CARGO PANTS</h3>
+                    <p class="product-price">₹3,499</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="category-label">HOT</span>
+                <img src="images/products/streetwear2.jpg" alt="Streetwear Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">GRAPHIC HOODIE</h3>
+                    <p class="product-price">₹2,999</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="category-label">TRENDING</span>
+                <img src="images/products/streetwear3.jpg" alt="Streetwear Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">URBAN JACKET</h3>
+                    <p class="product-price">₹4,999</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="category-label">POPULAR</span>
+                <img src="images/products/streetwear4.jpg" alt="Streetwear Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">DESIGNER TEE</h3>
+                    <p class="product-price">₹1,999</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="category-label">BESTSELLER</span>
+                <img src="images/products/streetwear5.jpg" alt="Streetwear Product" class="product-image">
+                <div class="product-info-overlay">
+                    <h3 class="product-title">TRACK PANTS</h3>
+                    <p class="product-price">₹2,499</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ABOUT HASUTA</h3>
+                <p>Contemporary streetwear brand embodying urban culture and modern fashion. Discover unique designs that define your style.</p>
+            </div>
+            <div class="footer-section">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/+919999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 HASUTA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/firebase-config.js"></script>
+    <script type="module" src="/js/firebase-utils.js"></script>
+    <script type="module" src="/product view pages/js/pd1.js"></script>
+
+<!-- Reviews Overlay -->
+<div class="reviews-overlay" id="reviewsOverlay">
+    <div class="reviews-overlay-content">
+        <div class="reviews-overlay-header">
+            <h2>Customer Reviews</h2>
+            <button class="close-overlay" id="closeReviewsOverlay">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="reviews-overlay-stats">
+            <div class="stats-left">
+                <div class="rating-number">4.5</div>
+                <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="total-reviews">127 Reviews</div>
+            </div>
+            <div class="stats-right">
+                <div class="rating-bar">
+                    <span class="rating-label">5★</span>
+                    <div class="rating-progress">
+                        <div class="rating-progress-fill" style="width: 70%"></div>
+                    </div>
+                    <span class="rating-count">89</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="rating-label">4★</span>
+                    <div class="rating-progress">
+                        <div class="rating-progress-fill" style="width: 20%"></div>
+                    </div>
+                    <span class="rating-count">25</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="rating-label">3★</span>
+                    <div class="rating-progress">
+                        <div class="rating-progress-fill" style="width: 7%"></div>
+                    </div>
+                    <span class="rating-count">9</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="rating-label">2★</span>
+                    <div class="rating-progress">
+                        <div class="rating-progress-fill" style="width: 2%"></div>
+                    </div>
+                    <span class="rating-count">3</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="rating-label">1★</span>
+                    <div class="rating-progress">
+                        <div class="rating-progress-fill" style="width: 1%"></div>
+                    </div>
+                    <span class="rating-count">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-overlay-list">
+            <!-- Reviews will be dynamically added here -->
+        </div>
+    </div>
+</div>
+
+<!-- Add this before the closing body tag -->
+<div class="edit-overlay" id="editOverlay">
+    <div class="edit-overlay-content">
+        <div class="edit-overlay-header">
+            <h2>Edit Product Details</h2>
+            <button class="close-overlay" id="closeEditOverlay">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <form id="editProductForm" class="edit-form">
+            <div class="form-group image-upload-section">
+                <label>Main Image</label>
+                <div class="main-image-preview">
+                    <img id="editMainImagePreview" src="" alt="Main product image">
+                    <div class="image-upload-overlay">
+                        <input type="file" id="mainImageInput" accept="image/*" hidden>
+                        <button type="button" class="upload-btn" id="mainImageUploadBtn">
+                            <i class="fas fa-camera"></i>
+                            <span>Change Image</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Thumbnail Images</label>
+                <div class="thumbnail-upload-grid">
+                    <div class="thumbnail-slot">
+                        <img src="" alt="Thumbnail 1">
+                        <input type="file" accept="image/*" hidden>
+                        <button type="button" class="upload-thumbnail-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <!-- Repeat for more thumbnail slots -->
+                    <div class="thumbnail-slot">
+                        <img src="" alt="Thumbnail 2">
+                        <input type="file" accept="image/*" hidden>
+                        <button type="button" class="upload-thumbnail-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnail-slot">
+                        <img src="" alt="Thumbnail 3">
+                        <input type="file" accept="image/*" hidden>
+                        <button type="button" class="upload-thumbnail-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnail-slot">
+                        <img src="" alt="Thumbnail 4">
+                        <input type="file" accept="image/*" hidden>
+                        <button type="button" class="upload-thumbnail-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group stock-control">
+                <label>Stock Status</label>
+                <div class="stock-toggle">
+                    <input type="checkbox" id="stockStatus" checked>
+                    <label for="stockStatus" class="toggle-label">
+                        <span class="status-text in-stock">In Stock</span>
+                        <span class="status-text out-of-stock">Out of Stock</span>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group size-controls">
+                <label>Available Sizes</label>
+                <div class="size-checkbox-grid">
+                    <div class="size-checkbox">
+                        <input type="checkbox" id="sizeS" name="sizes[]" value="S">
+                        <label for="sizeS">S</label>
+                    </div>
+                    <div class="size-checkbox">
+                        <input type="checkbox" id="sizeM" name="sizes[]" value="M">
+                        <label for="sizeM">M</label>
+                    </div>
+                    <div class="size-checkbox">
+                        <input type="checkbox" id="sizeL" name="sizes[]" value="L">
+                        <label for="sizeL">L</label>
+                    </div>
+                    <div class="size-checkbox">
+                        <input type="checkbox" id="sizeXL" name="sizes[]" value="XL">
+                        <label for="sizeXL">XL</label>
+                    </div>
+                    <div class="size-checkbox">
+                        <input type="checkbox" id="sizeXXL" name="sizes[]" value="XXL">
+                        <label for="sizeXXL">XXL</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing form groups -->
+            <div class="form-group">
+                <label for="editTitle">Product Title</label>
+                <input type="text" id="editTitle" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="editPrice">Price (₹)</label>
+                <input type="number" id="editPrice" name="price" min="0" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="editCategory">Category</label>
+                <input type="text" id="editCategory" name="category" required>
+            </div>
+
+            <div class="form-group reviews-management">
+                <label>Customer Reviews Management</label>
+                <div class="reviews-list">
+                    <div class="review-edit-item">
+                        <div class="review-edit-header">
+                            <div class="review-user-info">
+                                <span class="user-name">John Doe</span>
+                                <span class="review-date">2 days ago</span>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-actions">
+                                <button type="button" class="review-action-btn hide-btn">
+                                    <i class="fas fa-eye-slash"></i>
+                                </button>
+                                <button type="button" class="review-action-btn delete-btn">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <textarea class="review-text" rows="2">Great quality product! The fabric is premium and the fit is perfect. Highly recommended for anyone looking for comfortable streetwear.</textarea>
+                        </div>
+                    </div>
+                    <!-- Add more review items here -->
+                    <div class="review-edit-item">
+                        <div class="review-edit-header">
+                            <div class="review-user-info">
+                                <span class="user-name">Emma Thompson</span>
+                                <span class="review-date">3 days ago</span>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <div class="review-actions">
+                                <button type="button" class="review-action-btn hide-btn"><i class="fas fa-eye-slash"></i></button>
+                                <button type="button" class="review-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <textarea class="review-text" rows="2">Love the design! The hoodie is super comfortable and the color is exactly as shown. Perfect for casual wear.</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-edit-item">
+                        <div class="review-edit-header">
+                            <div class="review-user-info">
+                                <span class="user-name">Alex Chen</span>
+                                <span class="review-date">5 days ago</span>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-actions">
+                                <button type="button" class="review-action-btn hide-btn"><i class="fas fa-eye-slash"></i></button>
+                                <button type="button" class="review-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <textarea class="review-text" rows="2">Amazing streetwear piece! The quality is outstanding and the style is on point. Will definitely buy more!</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Review 4-17 -->
+                    <div class="review-edit-item">
+                        <div class="review-edit-header">
+                            <div class="review-user-info">
+                                <span class="user-name">Sarah Wilson</span>
+                                <span class="review-date">1 week ago</span>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-actions">
+                                <button type="button" class="review-action-btn hide-btn"><i class="fas fa-eye-slash"></i></button>
+                                <button type="button" class="review-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <textarea class="review-text" rows="2">Good product but sizing runs a bit large. I recommend going one size down. Otherwise, great quality!</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Additional reviews with varying ratings and comments -->
+                    <div class="review-edit-item">
+                        <div class="review-edit-header">
+                            <div class="review-user-info">
+                                <span class="user-name">Michael Brown</span>
+                                <span class="review-date">1 week ago</span>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-actions">
+                                <button type="button" class="review-action-btn hide-btn"><i class="fas fa-eye-slash"></i></button>
+                                <button type="button" class="review-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <textarea class="review-text" rows="2">Perfect winter wear! The material is thick and warm, exactly what I was looking for. Fast shipping too!</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Repeat similar structure for remaining reviews with different names, dates, ratings, and comments -->
+                    <!-- Reviews 6-17 follow the same structure with unique content -->
+
+                    <!-- Example of a critical review -->
+                    <div class="review-edit-item">
+                        <div class="review-edit-header">
+                            <div class="review-user-info">
+                                <span class="user-name">David Lee</span>
+                                <span class="review-date">2 weeks ago</span>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-actions">
+                                <button type="button" class="review-action-btn hide-btn"><i class="fas fa-eye-slash"></i></button>
+                                <button type="button" class="review-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <textarea class="review-text" rows="2">The design is nice but the stitching quality could be better. Had some loose threads after first wash.</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Additional reviews for diverse feedback -->
+                    <div class="review-edit-item">
+                        <div class="review-edit-header">
+                            <div class="review-user-info">
+                                <span class="user-name">Lisa Martinez</span>
+                                <span class="review-date">2 weeks ago</span>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-actions">
+                                <button type="button" class="review-action-btn hide-btn"><i class="fas fa-eye-slash"></i></button>
+                                <button type="button" class="review-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <textarea class="review-text" rows="2">Absolutely love the street style vibe! The hoodie is comfortable and stylish. Got lots of compliments!</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Continue with remaining reviews following the same pattern -->
+                </div>
+                <div class="reviews-controls">
+                    <button type="button" class="add-review-btn">
+                        <i class="fas fa-plus"></i>
+                        Add Review
+                    </button>
+                    <div class="reviews-stats">
+                        <span>Total Reviews: 127</span>
+                        <span>Average Rating: 4.5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="cancel-btn" id="cancelEdit">Cancel</button>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+
+
