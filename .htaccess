@@ -1,21 +1,12 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|jpg|jpeg|png|gif)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+</IfModule>
 
-# Enable CORS
-Header set Access-Control-Allow-Origin "*"
+# Serve correct MIME type for favicon
+AddType image/x-icon .ico
+AddType image/png .png
 
-# Security headers
-Header set X-Content-Type-Options "nosniff"
-Header set X-Frame-Options "SAMEORIGIN"
-Header set X-XSS-Protection "1; mode=block"
-
-# Cache control
-<FilesMatch "\.(html|htm)$">
-    Header set Cache-Control "max-age=0, private, no-cache"
-</FilesMatch>
-
-<FilesMatch "\.(css|js|jpg|jpeg|png|gif)$">
-    Header set Cache-Control "max-age=31536000"
-</FilesMatch>
+# Serve correct MIME type for webmanifest
+AddType application/manifest+json .webmanifest
