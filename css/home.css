@@ -42,8 +42,33 @@ body {
     padding: 0 2rem;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo-image {
     height: 40px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-image {
+    transform: scale(1.05);
+}
+
+/* Mobile responsive logo */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        height: 28px;
+    }
 }
 
 .nav-icons {
