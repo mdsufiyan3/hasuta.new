@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/favicon/mstile-150x150.png"/>
+            <square150x150logo src="image/favicon-96x96.png"/>
             <TileColor>#6B7FD7</TileColor>
         </tile>
     </msapplication>
