@@ -9,15 +9,18 @@
     <meta name="title" content="HASUTA - Contemporary Streetwear & Urban Fashion">
     <meta name="description" content="Discover HASUTA's exclusive collection of contemporary streetwear and urban fashion. Shop premium quality clothing, accessories, and limited edition pieces that define modern style.">
     <meta name="keywords" content="HASUTA, streetwear, urban fashion, contemporary fashion, premium clothing, accessories, modern style">
-    
+    <meta name="title" content="HASUTA → Contemporary Streetwear & Urban Fashion">
+    <meta name="description" content="HASUTA - Your premier destination for streetwear and urban fashion. Discover Winter Collection, Street Style, Summer Essentials, Surfer Collection & Daily Fashion. Experience hassle-free shopping with COD available.">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hasuta.com/">
-    <meta property="og:title" content="HASUTA - Contemporary Streetwear & Urban Fashion">
-    <meta property="og:description" content="Elevate your style with HASUTA's exclusive collection of contemporary streetwear and urban fashion. Premium quality, unique designs.">
+    <meta property="og:title" content="HASUTA → Contemporary Streetwear & Urban Fashion">
+    <meta property="og:description" content="HASUTA brings you premium streetwear collections. Shop Winter, Street, Summer, Surfer & Daily Fashion. COD Available | Fast Shipping | Easy Returns">
     <meta property="og:image" content="https://hasuta.com/image/logo/hasuta-og-logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="HASUTA">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -63,6 +66,94 @@
         ]
     }
     </script>
+
+    <!-- Add this structured data after your existing script tags -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "HASUTA",
+        "url": "https://hasuta.shop",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://hasuta.shop/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "sameAs": [
+            "https://instagram.com/hasuta",
+            "https://facebook.com/hasuta",
+            "https://twitter.com/hasuta"
+        ],
+        "description": "HASUTA - Your premier destination for streetwear and urban fashion. Shop from our curated collections.",
+        "mainEntity": [{
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Winter Collection",
+                    "url": "https://hasuta.shop/winter-collection"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Street Style",
+                    "url": "https://hasuta.shop/street-style"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Summer Collection",
+                    "url": "https://hasuta.shop/summer-collection"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Surfer Collection",
+                    "url": "https://hasuta.shop/surfer-collection"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "Daily Fashion",
+                    "url": "https://hasuta.shop/daily-fashion"
+                }
+            ]
+        }]
+    }
+    </script>
+
+    <!-- Add this breadcrumb structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Winter Collection",
+            "item": "https://hasuta.shop/winter-collection"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Street Style",
+            "item": "https://hasuta.shop/street-style"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Summer Collection",
+            "item": "https://hasuta.shop/summer-collection"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "New Arrivals",
+            "item": "https://hasuta.shop/new-arrivals"
+        }]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -71,9 +162,9 @@
             <div class="logo">
                 <a href="index.html">
                     <!-- Update logo image with srcset for different sizes -->
-                    <img src="image/logo/hasuta-logo.png" 
-                         srcset="image/logo/hasuta-logo.png 1x,
-                                 image/logo/hasuta-logo@2x.png 2x"
+                    <img src="image/favicon-32x32.png" 
+                         srcset="image/favicon-32x32.png,
+                                 image/favicon-32x32.png"
                          alt="HASUTA" 
                          class="logo-image"
                          width="120"
@@ -102,7 +193,7 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-logo">
-            <img src="image/WhatsApp_Image_2025-01-16_at_22.06.40_0fe6baa7-removebg-preview - Copy.png" alt="HASUTA Logo" class="floating-logo">
+            <img src="image/download.png" alt="HASUTA Logo" class="floating-logo">
         </div>
         <div class="hero-content">
             
