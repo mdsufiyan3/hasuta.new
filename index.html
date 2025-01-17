@@ -15,14 +15,16 @@
     <meta property="og:url" content="https://hasuta.com/">
     <meta property="og:title" content="HASUTA - Contemporary Streetwear & Urban Fashion">
     <meta property="og:description" content="Elevate your style with HASUTA's exclusive collection of contemporary streetwear and urban fashion. Premium quality, unique designs.">
-    <meta property="og:image" content="https://hasuta.com/image/social-share.jpg">
+    <meta property="og:image" content="https://hasuta.com/image/logo/hasuta-og-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://hasuta.com/">
     <meta property="twitter:title" content="HASUTA - Contemporary Streetwear & Urban Fashion">
     <meta property="twitter:description" content="Elevate your style with HASUTA's exclusive collection of contemporary streetwear and urban fashion. Premium quality, unique designs.">
-    <meta property="twitter:image" content="https://hasuta.com/image/social-share.jpg">
+    <meta property="twitter:image" content="https://hasuta.com/image/logo/hasuta-twitter-logo.png">
 
     <!-- Additional SEO Meta Tags -->
     <meta name="author" content="HASUTA">
@@ -33,9 +35,9 @@
     <link rel="canonical" href="https://hasuta.com/">
 
     <!-- Favicon links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="image/fevicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="image/fevicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="image/fevicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-32x32.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#6B7FD7">
     <meta name="msapplication-TileColor" content="#6B7FD7">
@@ -45,6 +47,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- Logo structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HASUTA",
+        "url": "https://hasuta.shop",
+        "logo": "image/favicon-16x16.png",
+        "sameAs": [
+            "https://instagram.com/hasuta",
+            "https://facebook.com/hasuta",
+            "https://twitter.com/hasuta"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -52,7 +70,14 @@
         <nav class="nav-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="image/download.png" alt="HASUTA" class="logo-image">
+                    <!-- Update logo image with srcset for different sizes -->
+                    <img src="image/logo/hasuta-logo.png" 
+                         srcset="image/logo/hasuta-logo.png 1x,
+                                 image/logo/hasuta-logo@2x.png 2x"
+                         alt="HASUTA" 
+                         class="logo-image"
+                         width="120"
+                         height="40">
                 </a>
             </div>
             <div class="nav-icons">
