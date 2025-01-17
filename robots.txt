@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Allow: /image/favicon-16x16.png
+Sitemap: https://hasuta.shop/sitemap.xml
