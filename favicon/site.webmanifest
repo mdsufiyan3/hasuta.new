@@ -1,16 +1,26 @@
 {
     "name": "HASUTA",
     "short_name": "HASUTA",
+    "description": "Contemporary Streetwear & Urban Fashion",
+    "start_url": "/",
     "icons": [
         {
-            "src": "image/favicon-16x16.png",
+            "src": "/image/favicon-16x16.png",
             "sizes": "16x16",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
-            "src": "image/favicon-16x16.png",
+            "src": "/image/favicon-16x16.png",
             "sizes": "32x32",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/image/favicon-16x16.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
     "theme_color": "#6B7FD7",
